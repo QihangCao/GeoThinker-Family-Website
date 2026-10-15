@@ -4,6 +4,12 @@ A shared project website for **GeoThinker**, **GeoThinker-F**, and **DynThinker*
 
 The page presents their common approach to spatial reasoning, with three animated model diagrams, a shared scene video, and paper figures.
 
+## Website
+
+https://qihangcao.github.io/GeoThinker-Family-Website/
+
+GitHub Pages publishes the root of `main`. Changes pushed to `main` are deployed automatically.
+
 ## Local preview
 
 ```bash
