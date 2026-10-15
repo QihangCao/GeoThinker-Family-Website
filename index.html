@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="style.css?v=three-cards-8">
   <link rel="stylesheet" href="story.css?v=three-cards-8">
   <link rel="stylesheet" href="polish.css?v=4">
+  <link rel="stylesheet" href="films.css?v=films-1">
 </head>
 <body>
   <header class="site-header">
@@ -18,7 +19,7 @@
   <main>
     <div class="intro story-intro">
       <h1>Think with <span>the scene.</span></h1>
-      <p>Let semantics guide geometry. Make it faster. Extend it to motion.</p>
+      <p>Let semantics guide geometry. Make it faster. Extend it to dynamics. <a class="intro-films" href="#research-films"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m9 5 11 7-11 7V5Z"/></svg>Watch the films <span aria-hidden="true">↓</span></a></p>
     </div>
     <div id="mechanism" class="mechanism-grid" aria-label="Three ways to think with the scene">
 <article class="model-card" data-model="geo" aria-labelledby="card-geo" tabindex="0">
@@ -36,14 +37,27 @@
   <div class="card-progress" aria-hidden="true"><i></i></div>
  </article>
 <article class="model-card" data-model="dyn" aria-labelledby="card-dyn" tabindex="0">
-  <header class="card-heading"><span class="model-symbol symbol-dyn"><svg class="ui-icon icon-dyn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9a8 8 0 0 1 14-3l2 2M20 3v5h-5M20 15a8 8 0 0 1-14 3l-2-2M4 21v-5h5"/><circle cx="12" cy="12" r="2.5"/></svg></span><h2 id="card-dyn">DynThinker</h2><p>Space + motion</p></header>
+  <header class="card-heading"><span class="model-symbol symbol-dyn"><svg class="ui-icon icon-dyn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9a8 8 0 0 1 14-3l2 2M20 3v5h-5M20 15a8 8 0 0 1-14 3l-2-2M4 21v-5h5"/><circle cx="12" cy="12" r="2.5"/></svg></span><h2 id="card-dyn">DynThinker</h2><p>Space + dynamics</p></header>
   <div class="card-stage"><div class="card-video"><video muted playsinline preload="metadata" poster="assets/real-scene-poster.jpg" aria-label="Real kitchen video for DynThinker"><source src="assets/real-scene.mp4" type="video/mp4"></video><img class="keyframe" src="assets/real-scene-keyframe.jpg" alt="Kitchen keyframe" hidden></div><svg class="card-diagram" viewBox="0 0 360 486" role="img" aria-label="DynThinker: features injected into intermediate VLM layers"></svg></div>
-  <p class="card-caption">Understand space + motion</p>
+  <p class="card-caption">Understand space + dynamics</p>
   <div class="card-controls"><div class="card-steps" role="group" aria-label="DynThinker animation steps"></div><button class="card-toggle" aria-label="Pause DynThinker">Ⅱ</button></div>
   <div class="card-progress" aria-hidden="true"><i></i></div>
  </article>
     </div>
     <div class="mechanism-footnote"><span>Hover to pause</span><span>Illustrated flow · <a href="https://facebookresearch.github.io/projectaria_tools/docs/open_datasets/aria_digital_twin_dataset" target="_blank" rel="noreferrer">Video: Aria Digital Twin ↗</a></span></div>
+    <section id="research-films" class="research-films" aria-labelledby="films-title">
+      <div class="films-heading"><h2 id="films-title">The research, in brief.</h2><span>Two short films</span></div>
+      <div class="films-grid">
+        <a class="film-card film-fast" href="assets/videos/geothinker-f.mp4" data-film data-film-title="GeoThinker-F" data-film-duration="1:24" data-film-poster="assets/videos/geothinker-f-poster.jpg" data-film-captions="assets/videos/geothinker-f-en.vtt" aria-label="Watch GeoThinker-F research film, 1:24">
+          <div class="film-poster"><img src="assets/videos/geothinker-f-poster.jpg" width="1200" height="675" loading="lazy" decoding="async" alt="Preview of the GeoThinker-F research film"><span class="film-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m9 5 11 7-11 7V5Z"/></svg><span>Play film</span></span><span class="film-duration">1:24</span></div>
+          <div class="film-info"><div><h3>GeoThinker-F</h3><p>Predict from within.</p></div><span class="film-go" aria-hidden="true">↗</span></div>
+        </a>
+        <a class="film-card film-dyn" href="assets/videos/dynthinker.mp4" data-film data-film-title="DynThinker" data-film-duration="1:13" data-film-poster="assets/videos/dynthinker-poster.jpg" data-film-captions="assets/videos/dynthinker-en.vtt" aria-label="Watch DynThinker research film, 1:13">
+          <div class="film-poster"><img src="assets/videos/dynthinker-poster.jpg" width="1200" height="675" loading="lazy" decoding="async" alt="Preview of the DynThinker research film"><span class="film-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m9 5 11 7-11 7V5Z"/></svg><span>Play film</span></span><span class="film-duration">1:13</span></div>
+          <div class="film-info"><div><h3>DynThinker</h3><p>Spatial + dynamic. One model.</p></div><span class="film-go" aria-hidden="true">↗</span></div>
+        </a>
+      </div>
+    </section>
     <section id="geothinker" aria-labelledby="geo-title">
       <div class="section-heading"><span class="section-symbol symbol-geo"><svg class="ui-icon icon-geo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9M8 5.3l8 4.5"/></svg></span><h2 id="geo-title">GeoThinker</h2><span class="venue-tag" aria-label="Published at ICML"><svg class="venue-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 5.5C7.8 3.8 5.3 3.4 2.5 4.1v11.2c2.8-.7 5.3-.3 7.5 1.4 2.2-1.7 4.7-2.1 7.5-1.4V4.1c-2.8-.7-5.3-.3-7.5 1.4Z" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round"/><path d="M10 5.5v11M5 7.5l2.5.5M5 10l2.5.5m5-2.5 2.5-.5m-2.5 5.5 2.5-.5" stroke="currentColor" stroke-width="1.15" stroke-linecap="round"/></svg><b>ICML</b></span></div>
       <p class="description">Semantic gating guides geometry fusion inside the VLM.</p>
@@ -53,22 +67,27 @@
     <section id="geothinker-f" aria-labelledby="fast-title">
       <div class="section-heading"><span class="section-symbol symbol-fast"><svg class="ui-icon icon-fast" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14 2-9 12h6l-1 8 9-12h-6l1-8Z"/></svg></span><h2 id="fast-title">GeoThinker-F</h2></div>
       <p class="description">Predict geometry and temporal features internally for faster inference.</p>
-      <div class="links"><a href="https://arxiv.org/abs/2610.20592" target="_blank" rel="noreferrer">Paper <span class="link-arrow" aria-hidden="true">↗</span></a><a href="https://github.com/Li-Hao-yuan/GeoThinker/" target="_blank" rel="noreferrer"><svg class="ui-icon icon-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 16"/></svg>Code <span class="link-arrow" aria-hidden="true">↗</span></a><a class="figure-link" href="assets/geothinker-f-method.webp" data-title="GeoThinker-F architecture" target="_blank" rel="noreferrer"><svg class="ui-icon icon-architecture" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="3" width="8" height="6" rx="1.5"/><rect x="2" y="16" width="7" height="5" rx="1.5"/><rect x="15" y="16" width="7" height="5" rx="1.5"/><path d="M12 9v4M5.5 16v-3h13v3"/></svg>Architecture <span class="link-arrow" aria-hidden="true">↗</span></a></div>
+      <div class="links"><a href="https://arxiv.org/abs/2610.20592" target="_blank" rel="noreferrer">Paper <span class="link-arrow" aria-hidden="true">↗</span></a><a href="https://github.com/Li-Hao-yuan/GeoThinker/" target="_blank" rel="noreferrer"><svg class="ui-icon icon-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 16"/></svg>Code <span class="link-arrow" aria-hidden="true">↗</span></a><a class="film-link" href="assets/videos/geothinker-f.mp4" data-film data-film-title="GeoThinker-F" data-film-duration="1:24" data-film-poster="assets/videos/geothinker-f-poster.jpg" data-film-captions="assets/videos/geothinker-f-en.vtt" aria-label="Watch GeoThinker-F research film"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m9 5 11 7-11 7V5Z"/></svg>Video <span class="film-link-time">1:24</span></a><a class="figure-link" href="assets/geothinker-f-method.webp" data-title="GeoThinker-F architecture" target="_blank" rel="noreferrer"><svg class="ui-icon icon-architecture" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="3" width="8" height="6" rx="1.5"/><rect x="2" y="16" width="7" height="5" rx="1.5"/><rect x="15" y="16" width="7" height="5" rx="1.5"/><path d="M12 9v4M5.5 16v-3h13v3"/></svg>Architecture <span class="link-arrow" aria-hidden="true">↗</span></a></div>
       <figure><a class="figure-link" href="assets/geothinker-f-teaser.webp" data-title="GeoThinker-F" target="_blank" rel="noreferrer" aria-label="Enlarge GeoThinker-F figure"><span class="figure-expand"><svg class="ui-icon icon-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></span><img src="assets/geothinker-f-teaser.webp" width="2200" height="586" alt="GeoThinker-F predicts features internally, with a comparison of spatial reasoning accuracy and inference latency." loading="lazy" decoding="async"></a></figure>
     </section>
     <section id="dynthinker" aria-labelledby="dyn-title">
       <div class="section-heading"><span class="section-symbol symbol-dyn"><svg class="ui-icon icon-dyn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9a8 8 0 0 1 14-3l2 2M20 3v5h-5M20 15a8 8 0 0 1-14 3l-2-2M4 21v-5h5"/><circle cx="12" cy="12" r="2.5"/></svg></span><h2 id="dyn-title">DynThinker</h2></div>
-      <p class="description">Combine spatial and dynamic features to understand scenes in motion.</p>
-      <div class="links"><a href="https://arxiv.org/abs/2610.20598" target="_blank" rel="noreferrer">Paper <span class="link-arrow" aria-hidden="true">↗</span></a><a id="dynthinker-resource" href="https://github.com/QihangCao/DynThinker" target="_blank" rel="noreferrer"><svg class="ui-icon icon-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 16"/></svg>Code <span class="link-arrow" aria-hidden="true">↗</span></a><a class="figure-link" href="assets/dynthinker-method.webp" data-title="DynThinker architecture" target="_blank" rel="noreferrer"><svg class="ui-icon icon-architecture" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="3" width="8" height="6" rx="1.5"/><rect x="2" y="16" width="7" height="5" rx="1.5"/><rect x="15" y="16" width="7" height="5" rx="1.5"/><path d="M12 9v4M5.5 16v-3h13v3"/></svg>Architecture <span class="link-arrow" aria-hidden="true">↗</span></a></div>
+      <p class="description">Combine spatial and dynamic features for 3D + 4D reasoning.</p>
+      <div class="links"><a href="https://arxiv.org/abs/2610.20598" target="_blank" rel="noreferrer">Paper <span class="link-arrow" aria-hidden="true">↗</span></a><a id="dynthinker-resource" href="https://github.com/QihangCao/DynThinker" target="_blank" rel="noreferrer"><svg class="ui-icon icon-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 16"/></svg>Code <span class="link-arrow" aria-hidden="true">↗</span></a><a class="film-link" href="assets/videos/dynthinker.mp4" data-film data-film-title="DynThinker" data-film-duration="1:13" data-film-poster="assets/videos/dynthinker-poster.jpg" data-film-captions="assets/videos/dynthinker-en.vtt" aria-label="Watch DynThinker research film"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m9 5 11 7-11 7V5Z"/></svg>Video <span class="film-link-time">1:13</span></a><a class="figure-link" href="assets/dynthinker-method.webp" data-title="DynThinker architecture" target="_blank" rel="noreferrer"><svg class="ui-icon icon-architecture" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="3" width="8" height="6" rx="1.5"/><rect x="2" y="16" width="7" height="5" rx="1.5"/><rect x="15" y="16" width="7" height="5" rx="1.5"/><path d="M12 9v4M5.5 16v-3h13v3"/></svg>Architecture <span class="link-arrow" aria-hidden="true">↗</span></a></div>
       <figure><a class="figure-link" href="assets/dynthinker-teaser.webp" data-title="DynThinker" target="_blank" rel="noreferrer" aria-label="Enlarge DynThinker figure"><span class="figure-expand"><svg class="ui-icon icon-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></span><img src="assets/dynthinker-teaser.webp" width="2200" height="1003" alt="DynThinker unifies static 3D and dynamic 4D understanding, illustrated with examples and benchmark comparisons." loading="lazy" decoding="async"></a></figure>
     </section>
   </main>
-  <footer><span>GeoThinker · GeoThinker-F · DynThinker</span><span>Figures from the corresponding research papers.</span></footer>
+  <footer><span>GeoThinker · GeoThinker-F · DynThinker</span><span>Research figures and films from the corresponding projects.</span></footer>
   <dialog id="figure-viewer" aria-labelledby="viewer-title">
     <div class="viewer-toolbar"><p id="viewer-title">Figure</p><div><button id="viewer-zoom" aria-pressed="false">Zoom in</button><button id="viewer-close" autofocus>Close ✕</button></div></div>
     <div class="viewer-scroll"><img id="viewer-image" alt=""></div>
   </dialog>
+  <dialog id="film-viewer" aria-labelledby="film-title">
+    <div class="film-toolbar"><div><h2 id="film-title">Research film</h2><span id="film-length"></span></div><button id="film-close" type="button" autofocus aria-label="Close video">Close <span aria-hidden="true">×</span></button></div>
+    <video id="research-player" controls playsinline preload="none" aria-label="Research film player"><track id="film-captions" kind="captions" srclang="en" label="English"></video>
+  </dialog>
+  <script src="films.js?v=films-1"></script>
   <script src="app.js?v=polish-1"></script>
-  <script src="story.js?v=three-cards-8"></script>
+  <script src="story.js?v=films-1"></script>
 </body>
 </html>

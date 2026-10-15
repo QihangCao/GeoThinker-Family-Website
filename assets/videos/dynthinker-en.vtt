@@ -1,0 +1,105 @@
+WEBVTT
+
+1
+00:00:00.300 --> 00:00:01.195
+Where is the knife?
+
+2
+00:00:03.688 --> 00:00:05.508
+What happens when the person picks it up?
+
+3
+00:00:07.296 --> 00:00:10.312
+Understanding a real scene takes both static 3D and
+
+4
+00:00:10.313 --> 00:00:11.743
+dynamic 4D reasoning.
+
+5
+00:00:12.300 --> 00:00:15.200
+DynThinker brings both into one open model.
+
+6
+00:00:15.433 --> 00:00:19.832
+Across nine benchmarks, it achieves the highest overall average among the
+
+7
+00:00:19.833 --> 00:00:20.900
+models compared,
+
+8
+00:00:21.133 --> 00:00:23.633
+including the strongest proprietary baseline.
+
+9
+00:00:24.800 --> 00:00:25.833
+From the same scene:
+
+10
+00:00:26.067 --> 00:00:27.567
+global spatial structure,
+
+11
+00:00:27.800 --> 00:00:29.333
+and local dynamic change.
+
+12
+00:00:29.600 --> 00:00:34.367
+Semantic context gates both priors into the model's visual tokens.
+
+13
+00:00:35.800 --> 00:00:38.567
+Spatial adaptation can weaken dynamic reasoning.
+
+14
+00:00:38.800 --> 00:00:42.033
+Decoupled EMA preserves pretrained knowledge:
+
+15
+00:00:42.400 --> 00:00:44.400
+longer histories for sensitive layers,
+
+16
+00:00:44.500 --> 00:00:48.400
+shorter histories for others, and online weights for new fusion layers.
+
+17
+00:00:48.633 --> 00:00:50.033
+In the four B ablation,
+
+18
+00:00:50.167 --> 00:00:54.367
+dynamic accuracy recovers, and spatial accuracy improves too.
+
+19
+00:00:55.800 --> 00:01:00.332
+Together, they raise the overall average from 44.0 to 60.3 on
+
+20
+00:01:00.333 --> 00:01:01.333
+the same backbone.
+
+21
+00:01:01.600 --> 00:01:04.767
+Static and dynamic reasoning, strengthened together.
+
+22
+00:01:05.800 --> 00:01:06.700
+DynThinker.
+
+23
+00:01:07.000 --> 00:01:08.200
+Static 3D.
+
+24
+00:01:08.367 --> 00:01:09.500
+Dynamic 4D.
+
+25
+00:01:09.767 --> 00:01:10.600
+One open model.
+
+26
+00:01:10.867 --> 00:01:11.833
+Code and weights.

@@ -1,0 +1,113 @@
+WEBVTT
+
+1
+00:00:00.300 --> 00:00:00.832
+Hey!
+
+2
+00:00:01.575 --> 00:00:03.845
+Is the bookshelf left or right of the laptop?
+
+3
+00:00:04.712 --> 00:00:05.620
+Hmm, let me see.
+
+4
+00:00:07.400 --> 00:00:07.832
+Aha!
+
+5
+00:00:08.125 --> 00:00:09.595
+The bookshelf is on the right.
+
+6
+00:00:10.280 --> 00:00:11.182
+Faster reasoning.
+
+7
+00:00:11.446 --> 00:00:12.143
+Less waiting.
+
+8
+00:00:13.332 --> 00:00:15.291
+Four approaches to spatial reasoning.
+
+9
+00:00:15.688 --> 00:00:18.909
+Vanilla models use no explicit geometry prior.
+
+10
+00:00:19.306 --> 00:00:22.022
+Co-encoders add a runtime geometry encoder.
+
+11
+00:00:22.431 --> 00:00:24.101
+Distillation learns from a teacher.
+
+12
+00:00:24.498 --> 00:00:29.847
+GeoThinker-F predicts useful priors internally, then fuses selectively.
+
+13
+00:00:31.300 --> 00:00:35.633
+Geo Thinker gains spatial priors from an extra geometry encoder.
+
+14
+00:00:35.900 --> 00:00:39.633
+GeoThinker-F predicts those priors from within,
+
+15
+00:00:39.967 --> 00:00:41.100
+then fuses them.
+
+16
+00:00:41.367 --> 00:00:42.933
+The benefit, with less waiting.
+
+17
+00:00:44.300 --> 00:00:47.000
+Lightweight heads read intermediate states.
+
+18
+00:00:47.267 --> 00:00:48.133
+During training,
+
+19
+00:00:48.400 --> 00:00:51.233
+an offline teacher supervises geometry,
+
+20
+00:00:51.500 --> 00:00:55.033
+while next-frame visual features supervise semantic prediction.
+
+21
+00:00:55.300 --> 00:00:59.667
+Gated fusion injects these priors into selected intermediate layers.
+
+22
+00:00:59.933 --> 00:01:03.000
+At inference, the extra 3D encoder is gone.
+
+23
+00:01:04.267 --> 00:01:06.300
+On V S I Bench,
+
+24
+00:01:06.400 --> 00:01:11.333
+GeoThinker-F reaches seventy point four among leading spatial models.
+
+25
+00:01:11.600 --> 00:01:13.733
+With token compression on both models,
+
+26
+00:01:14.033 --> 00:01:17.467
+inference is 3.6 times faster than Geo Thinker.
+
+27
+00:01:18.300 --> 00:01:21.100
+Geometry from a teacher, predicted from within.
+
+28
+00:01:21.367 --> 00:01:22.533
+GeoThinker-F.
