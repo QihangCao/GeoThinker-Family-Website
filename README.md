@@ -2,7 +2,7 @@
 
 A shared project website for **GeoThinker**, **GeoThinker-F**, and **DynThinker**.
 
-The page presents their common approach to spatial reasoning, with three animated model diagrams, a shared scene video, research films, and paper figures.
+The page presents their common approach to spatial reasoning, with research films first, an expandable method comparison containing three animated model diagrams, and paper figures.
 
 ## Website
 
@@ -28,7 +28,7 @@ Open http://127.0.0.1:8000/ in your browser. No build step or package installati
 - `assets/videos/`: final research films, lightweight posters, and optional English captions.
 - `assets/`: paper figures, video, and still frames.
 
-Each model diagram plays automatically. Hover or focus to pause and select a step; touch controls are also available. The page supports reduced-motion preferences.
+The method comparison is collapsed by default. Expand it to see the three model diagrams side by side. Each diagram animates while visible; closing the comparison pauses playback. Scene videos use no preload. Hover or focus to pause and select a step; touch controls are also available. The page supports reduced-motion preferences.
 
 ## Credits
 
@@ -43,7 +43,7 @@ GeoThinker figures are from its [project website](https://li-hao-yuan.github.io/
 
 ## Research films
 
-The film shelf and each corresponding work section open the same in-page player. The MP4 source is assigned only after a play action; posters load lazily. There is no automatic film playback/download on page load. The player uses native controls, inline mobile playback and optional English captions. Closing it pauses playback, releases the video source and restores focus. Background mechanism animations pause while any media dialog is open. Direct MP4 links remain available without JavaScript.
+The film shelf and each corresponding work section open the same in-page player. The MP4 source is assigned only after a play action; the first poster loads with priority and the second loads lazily. There is no automatic film playback/download on page load. The player uses native controls, inline mobile playback and optional English captions. Closing it pauses playback, releases the video source and restores focus. Background mechanism animations pause while any media dialog is open. Direct MP4 links remain available without JavaScript.
 
 - DynThinker: 72.5 s, 1920×1080, 30 fps.
 - GeoThinker-F: 83.5 s, 1920×1080, 30 fps.

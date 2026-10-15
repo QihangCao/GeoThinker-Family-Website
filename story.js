@@ -8,6 +8,7 @@ const models={
 for(const root of document.querySelectorAll('.model-card')) setup(root);
 function setup(root){
  const mode=root.dataset.model,m=models[mode],video=root.querySelector('video'),still=root.querySelector('.keyframe'),svg=root.querySelector('.card-diagram'),caption=root.querySelector('.card-caption'),controls=root.querySelector('.card-steps'),toggle=root.querySelector('.card-toggle'),bar=root.querySelector('.card-progress i');
+ const comparison=root.closest('details');
  const prefix='card-'+mode+'-',geo=mode==='geo',fast=mode==='fast',dyn=mode==='dyn';
  let time=reduced.matches?11:0,step=reduced.matches?3:0,held=reduced.matches,hover=false,keyFocus=false,visible=false,raf=0,last=0,pending=false,failed=false,previousFreeze=false,particles=[];
  still.src='assets/'+m.poster;
@@ -59,7 +60,7 @@ function setup(root){
   svg.querySelector('.particles').innerHTML=bits;caption.textContent=m.captions[step];buttons.forEach((b,i)=>b.setAttribute('aria-pressed',String(step===i)));move();sync();
  }
  function move(){for(const p of particles){const q=p.path.getPointAtLength(((time*.3+p.offset)%1)*p.length);svg.querySelector('#'+prefix+'p'+p.index).setAttribute('transform',`translate(${q.x},${q.y})`);}bar.style.transform=`scaleX(${time/14})`;}
- function running(){return visible&&!hover&&!held&&!keyFocus&&!document.hidden&&!document.querySelector("dialog[open]");}
+ function running(){return (!comparison||comparison.open)&&visible&&!hover&&!held&&!keyFocus&&!document.hidden&&!document.querySelector("dialog[open]");}
  function seek(t){if(Number.isFinite(video.duration))video.currentTime=Math.min(t,video.duration-.05);}
  function sync(){const freeze=step===1||step===2||failed||(reduced.matches&&held);still.hidden=!freeze;if(freeze){video.pause();if(!previousFreeze)seek(m.key);}else if(!running())video.pause();else if(video.paused&&!pending&&!failed){pending=true;video.play().then(()=>{pending=false;if(!running()||step===1||step===2)video.pause();}).catch(e=>{pending=false;if(e.name!=='AbortError'){failed=true;still.hidden=false;}});}previousFreeze=freeze;}
  function schedule(){root.dataset.playing=String(running());root.dataset.held=String(held);toggle.textContent=held?'▷':'Ⅱ';toggle.setAttribute('aria-label',`${held?'Play':'Pause'} ${root.querySelector('h2').textContent}`);sync();if(running()&&!raf){last=performance.now();raf=requestAnimationFrame(tick);}else if(!running()&&raf){cancelAnimationFrame(raf);raf=0;}}
@@ -72,7 +73,7 @@ function setup(root){
  toggle.addEventListener('click',()=>{held=!held;if(!held&&failed){failed=false;}schedule();});
  video.addEventListener('loadedmetadata',()=>{seek(step===1||step===2?m.key:m.start);sync();});video.addEventListener('timeupdate',()=>{if(video.currentTime>=m.end&&step!==1&&step!==2)seek(m.start);});
  const fail=()=>{failed=true;video.pause();still.hidden=false;};video.addEventListener('error',fail);video.querySelector('source').addEventListener('error',fail);
- new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;schedule();},{threshold:0}).observe(root);document.addEventListener('visibilitychange',schedule);document.querySelectorAll('dialog').forEach(dialog=>new MutationObserver(schedule).observe(dialog,{attributes:true,attributeFilter:['open']}));
+ new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;schedule();},{threshold:0}).observe(root);document.addEventListener('visibilitychange',schedule);if(comparison)comparison.addEventListener('toggle',schedule);document.querySelectorAll('dialog').forEach(dialog=>new MutationObserver(schedule).observe(dialog,{attributes:true,attributeFilter:['open']}));
  reduced.addEventListener('change',()=>{held=reduced.matches;draw();schedule();});draw();schedule();
 }
 })();
